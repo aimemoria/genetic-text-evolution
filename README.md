@@ -1,13 +1,13 @@
-# Genetic Algorithms in NLP - Educational Activity Package
+# Genetic Algorithm Text Evolution
 
-A comprehensive class activity package for teaching genetic algorithms through an interactive Shakespeare text evolution project. This repository contains everything needed to deliver a hands-on learning experience about evolutionary computation and its applications in Natural Language Processing.
+An interactive demonstration of genetic algorithms that evolves random text into Shakespeare quotes. Includes a standalone HTML demo and a React + TypeScript application with visualization and configurable parameters.
 
-## 📚 What's Included
+## What's Included
 
 ### 1. Interactive HTML Handout
 **File:** `genetic-algorithm-handout.html`
 
-An interactive educational handout:
+An interactive handout:
 - Visual explanation of genetic algorithm concepts
 - Animated SVG diagrams showing the GA lifecycle
 - Interactive browser-based demo (evolve "HELLO WORLD")
@@ -15,7 +15,7 @@ An interactive educational handout:
 - Comprehensive coverage of selection, crossover, and mutation
 - Activity overview and learning objectives
 
-**Usage:** Open directly in any web browser for classroom presentation or student reference.
+**Usage:** Open directly in any web browser.
 
 ### 2. Complete React Application
 **Directory:** `shakespeare-ga/`
@@ -38,38 +38,27 @@ A production-ready React + TypeScript application demonstrating genetic algorith
 - CSS3 with gradients and animations
 - No external dependencies for GA logic
 
-### 3. Step-by-Step Student Instructions
+### 3. Step-by-Step Instructions
 **File:** `STUDENT-INSTRUCTIONS.md`
 
-Comprehensive guide for students including:
+Comprehensive guide including:
 - Prerequisites and setup instructions
 - 8 detailed implementation steps
 - Code templates with TODO sections
 - Testing guidelines
 - Deployment instructions for Vercel and Render.com
-- Extension challenges for advanced students
+- Extension challenges for advanced users
 - Troubleshooting guide
-- Grading rubric
-- Learning outcomes
+-- Troubleshooting guide
 
-## 🎯 Learning Objectives
-
-Students will:
-1. Understand core genetic algorithm concepts (fitness, selection, crossover, mutation)
-2. Implement evolutionary computation from scratch
-3. Build a complete React application with TypeScript
-4. Visualize algorithm performance in real-time
-5. Deploy a web application to production
-6. Apply GAs to solve NLP optimization problems
-
-## 🧬 Why This Problem?
+## Why This Problem?
 
 The activity focuses on evolving random text into Shakespeare quotes because it perfectly demonstrates GA advantages:
 
 **The Challenge:**
-- Target phrase "TO BE OR NOT TO BE" has 27^18 ≈ 7.6 × 10^25 possible combinations
+- Target phrase "TO BE OR NOT TO BE" has 27^18 ~= 7.6 x 10^25 possible combinations
 - Brute force at 1 billion attempts/second: ~2.4 billion years
-- Genetic algorithm: Typically solves in <1000 generations (~seconds)
+- Genetic algorithm: Typically solves in <1000 generations (seconds)
 
 **Why GAs Excel:**
 - Massive search space makes exhaustive search impossible
@@ -78,7 +67,7 @@ The activity focuses on evolving random text into Shakespeare quotes because it 
 - Evolutionary pressure converges on optimal solution
 - No domain-specific knowledge required
 
-## 🚀 Quick Start
+## Quick Start
 
 ### For Instructors
 
@@ -95,7 +84,7 @@ The activity focuses on evolving random text into Shakespeare quotes because it 
    ```
    Open http://localhost:3000
 
-3. **Share with students:**
+3. **Share with your team:**
    - Provide link to this repository
    - Direct them to STUDENT-INSTRUCTIONS.md
    - Set implementation deadline
@@ -119,36 +108,36 @@ The activity focuses on evolving random text into Shakespeare quotes because it 
 4. **Reference the working solution:**
    The `shakespeare-ga/` directory contains a complete implementation for reference
 
-## 📦 Project Structure
+## Project Structure
 
 ```
-AIT-204-genetic-alg/
-├── README.md                           # This file
-├── genetic-algorithm-handout.html      # Interactive educational handout
-├── STUDENT-INSTRUCTIONS.md             # Step-by-step implementation guide
-└── shakespeare-ga/                     # Complete React application
-    ├── package.json
-    ├── vercel.json                     # Vercel deployment config
-    ├── render.yaml                     # Render.com deployment config
-    ├── public/                         # Static assets
-    └── src/
-        ├── App.tsx                     # Main application component
-        ├── App.css                     # Application styles
-        ├── types/
-        │   └── Individual.ts           # Individual/Chromosome class
-        ├── algorithms/
-        │   └── GeneticAlgorithm.ts     # Core GA implementation
-        ├── components/
-        │   ├── ControlPanel.tsx        # User controls
-        │   ├── PopulationDisplay.tsx   # Evolution visualization
-        │   └── FitnessChart.tsx        # Progress chart
-        └── styles/
-            ├── ControlPanel.css
-            ├── PopulationDisplay.css
-            └── FitnessChart.css
+genetic-text-evolution/
+   README.md                           # This file
+   genetic-algorithm-handout.html      # Interactive handout
+   STUDENT-INSTRUCTIONS.md             # Step-by-step implementation guide
+   shakespeare-ga/                     # React application
+      package.json
+      vercel.json                       # Vercel deployment config
+      render.yaml                       # Render.com deployment config
+      public/                           # Static assets
+      src/
+         App.tsx                         # Main application component
+         App.css                         # Application styles
+         types/
+            Individual.ts                 # Individual/Chromosome class
+         algorithms/
+            GeneticAlgorithm.ts           # Core GA implementation
+         components/
+            ControlPanel.tsx              # User controls
+            PopulationDisplay.tsx         # Evolution visualization
+            FitnessChart.tsx              # Progress chart
+         styles/
+            ControlPanel.css
+            PopulationDisplay.css
+            FitnessChart.css
 ```
 
-## 🎓 Class Activity Flow
+## Usage Flow
 
 ### Session 1: Introduction (60 minutes)
 1. Present genetic algorithm concepts using the HTML handout (20 min)
@@ -158,7 +147,7 @@ AIT-204-genetic-alg/
 5. Students begin setup and Part 1 (10 min)
 
 ### Session 2-3: Implementation (120 minutes)
-Students work through Parts 2-6 of STUDENT-INSTRUCTIONS.md:
+Users can work through Parts 2-6 of STUDENT-INSTRUCTIONS.md:
 - Implement Individual class
 - Build GeneticAlgorithm class
 - Create React components
@@ -170,7 +159,7 @@ Students work through Parts 2-6 of STUDENT-INSTRUCTIONS.md:
 - Work on extension challenges (30 min)
 - Prepare submission report (10 min)
 
-## 🌐 Deployment Options
+## Deployment Options
 
 ### Option 1: Vercel (Recommended)
 ```bash
@@ -194,7 +183,7 @@ npm run build
 npx gh-pages -d build
 ```
 
-## 🔧 Genetic Algorithm Parameters
+## Genetic Algorithm Parameters
 
 Students can experiment with:
 - **Population Size:** 50-500 (default: 200)
@@ -203,7 +192,7 @@ Students can experiment with:
 - **Elitism Count:** 0-10 (default: 2)
 - **Tournament Size:** Fixed at 5
 
-## 📊 Expected Results
+## Expected Results
 
 Typical performance for "TO BE OR NOT TO BE":
 - Population 100, Mutation 1%: ~300-500 generations
@@ -213,7 +202,7 @@ Typical performance for "TO BE OR NOT TO BE":
 Lower mutation rates converge faster but may get stuck.
 Higher mutation rates maintain diversity but converge slower.
 
-## 🎨 Customization Ideas
+## Customization Ideas
 
 ### For Instructors:
 1. Add more Shakespeare quotes
@@ -229,7 +218,7 @@ Higher mutation rates maintain diversity but converge slower.
 5. Add sound effects and animations
 6. Export evolution statistics to CSV
 
-## 📝 Assessment Rubric
+## Assessment Rubric
 
 | Criterion | Points | Description |
 |-----------|--------|-------------|
@@ -240,7 +229,7 @@ Higher mutation rates maintain diversity but converge slower.
 | Report | 5 | Quality of analysis and insights |
 | **Total** | **100** | |
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 **Issue:** Evolution gets stuck at 90% fitness
 **Solution:** Increase mutation rate slightly (1.5-2%)
@@ -254,7 +243,7 @@ Higher mutation rates maintain diversity but converge slower.
 **Issue:** Deployment build fails
 **Solution:** Check that all dependencies are in package.json, run `npm run build` locally first
 
-## 📚 Additional Resources
+## Additional Resources
 
 ### Genetic Algorithms
 - [Introduction to Evolutionary Computing](https://link.springer.com/book/10.1007/978-3-662-44874-8) - Eiben & Smith
@@ -269,9 +258,9 @@ Higher mutation rates maintain diversity but converge slower.
 - [Vercel Documentation](https://vercel.com/docs)
 - [Render Documentation](https://render.com/docs)
 
-## 🤝 Contributing
+## Contributing
 
-This is an educational project. Contributions welcome:
+Contributions are welcome:
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
@@ -283,9 +272,9 @@ Suggested improvements:
 - Performance optimizations
 - Accessibility enhancements
 
-## 📄 License
+## License
 
-MIT License - Free for educational use
+MIT License
 
 Copyright (c) 2025 AIT-204 Course Materials
 
@@ -295,7 +284,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## 👨‍🏫 About
+## About
 
 Created for AIT-204: Genetic Algorithms and Evolutionary Computation
 Grand Canyon University
@@ -307,14 +296,13 @@ Grand Canyon University
 - Neural evolution and neuroevolution
 - Applications in optimization, machine learning, and AI
 
-## 📧 Contact & Support
+## Contact and Support
 
 For questions or issues:
 - Open an issue in this repository
-- Contact course instructor
 - Check STUDENT-INSTRUCTIONS.md troubleshooting section
 
-## 🌟 Acknowledgments
+## Acknowledgments
 
 - Inspired by Daniel Shiffman's "Nature of Code"
 - Based on classic genetic algorithm literature
@@ -323,4 +311,4 @@ For questions or issues:
 
 ---
 
-**Ready to evolve?** Start with `genetic-algorithm-handout.html` and watch random text become Shakespeare! 🎭🧬
+Start with `genetic-algorithm-handout.html` and run the React app for the full interactive experience.
